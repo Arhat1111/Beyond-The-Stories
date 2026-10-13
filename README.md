@@ -1,17 +1,15 @@
-# Beyond The Stories — responsive scroll website (v3)
+# Beyond The Stories — Multi-page website (v4)
 
-Open `index.html` in a browser, or serve with `python3 -m http.server 8000`.
+Open `index.html` to view the homepage. Navigation now uses **separate HTML pages**:
 
-## Changes
-- Sticky 390vh cinematic hero with scroll-driven headline drift in opposite horizontal directions, zooming photo and photo layers.
-- Scroll-driven horizontal editorial section, additional photographic parallax, and responsive layouts.
-- Real photographic Unsplash image URLs (not AI-generated illustrations). Images require internet. Photos are editorial placeholders, **not** Shah Digital Marketing or Beyond The Stories work.
-- Image URLs are deliberately easy to replace in index.html and styles.css.
-- No external animation library or build step required.
-- Respects reduced motion, includes keyboard-accessible menu and descriptive image alt text.
+- `index.html`: cinematic scroll-parallax homepage, brand philosophy, two overview cards, work imagery and contact form.
+- `digital-solutions.html`: dedicated digital services page, 3D-style scroll photography, service details and gallery.
+- `coaching.html`: dedicated coaching and growth page, service details and enquiry CTA.
+- `styles.css` and `script.js`: shared styling, navigation and effects.
 
-## Important before publishing
-- Replace placeholder recipient `hello@example.com` in `script.js` with the actual business email. The form opens an email draft and does not submit to a backend.
-- Replace third-party Unsplash photos with properly licensed, verified Shah Digital Marketing images (or supplied approved work). No source was confidently authenticated for this exact company, so no outside marketing agency's portfolio is misrepresented.
-- Publish on a static host such as Vercel, Netlify or GitHub Pages.
-- Test on Chrome, Safari and mobile browsers with network access. External image delivery depends on Unsplash availability.
+All pages work together without a build step. Upload the entire folder to a static host, keeping the files together. Images are linked from Unsplash and require internet access. The contact form opens an email draft; change `hello@example.com` in `script.js` to the real recipient before publishing. Replace illustrative imagery with licensed, approved brand/client photography before launch.
+
+## Version 5 updates
+- Replaced homepage hero background with real photography of a digital analytics workspace (Unsplash).
+- Removed decorative star glyphs from the pages; navigation arrows remain plain text direction indicators, not emoji.
+- Kept the parallax animation and separate service pages unchanged.
