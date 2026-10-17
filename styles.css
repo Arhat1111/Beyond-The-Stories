@@ -17,3 +17,36 @@
 @keyframes heroArrive{from{transform:scale(1.16)}to{transform:scale(1.06)}}
 @media(max-width:700px){.inner-hero{min-height:540px;height:82svh}.inner-hero-content{padding:110px 6% 60px}.inner-hero-content h1{font-size:clamp(49px,12vw,78px)}.inner-hero-content p{font-size:14px}.page-return{padding:32px 6%;flex-direction:column}.inner-hero-shade{background:linear-gradient(90deg,#07110ee9,#09120e96)}}
 @media(prefers-reduced-motion:reduce){.inner-hero-photo{animation:none}}
+
+/* V6: vector-like CSS arrows: no Unicode emoji / emoji fonts */
+.icon-arrow {display:inline-block;position:relative;flex:none;width:1em;height:1em;vertical-align:-.11em;color:inherit;font-size:1em;line-height:1;transform:none}
+.icon-arrow::before {content:"";position:absolute;left:17%;top:48%;width:68%;height:1.5px;background:currentColor;transform:translateY(-50%);transform-origin:center}
+.icon-arrow::after {content:"";position:absolute;right:15%;top:25%;width:45%;height:45%;border-top:1.5px solid currentColor;border-right:1.5px solid currentColor}
+.icon-arrow--ne {transform:rotate(-45deg)}
+.icon-arrow--left {transform:rotate(180deg)}
+.icon-arrow--up {transform:rotate(-90deg)}
+.icon-arrow--down {transform:rotate(90deg)}
+.round-arrow .icon-arrow {font-size:25px}
+.service-rows .icon-arrow{font-size:20px;justify-self:end}
+.underlined-link .icon-arrow {font-size:16px}
+.footer-primary .icon-arrow,.page-return .icon-arrow,.header-action .icon-arrow{font-size:.9em}
+/* Prevent narrow iPhone layouts from clipping text, pushing content beyond viewport, or stacking over the next section. */
+html,body{max-width:100%;overflow-x:clip}
+.header{width:100%;max-width:100%}
+.service-rows>div{min-width:0;column-gap:12px}
+.service-rows h3{min-width:0;overflow-wrap:break-word}
+.service-rows .icon-arrow{color:#27372c}
+.inner-cta .large-title{overflow-wrap:break-word}
+@media(max-width:700px){
+ .round-arrow{width:48px;height:48px;flex:none}
+ .round-arrow .icon-arrow{font-size:20px}
+ .offer-bottom{left:22px;right:22px;bottom:25px;gap:12px}
+ .offer-bottom h3{font-size:clamp(40px,11.5vw,58px)}
+ .service-rows>div{grid-template-columns:34px minmax(0,1fr) 20px;column-gap:12px}
+ .service-rows h3{font-size:clamp(17px,4.8vw,21px);line-height:1.4}
+ .underlined-link{gap:16px;max-width:100%;align-items:center;justify-content:space-between;line-height:1.5}
+ .inner-cta{padding-top:64px;padding-bottom:72px}
+ .inner-cta h2{margin:26px 0 36px;line-height:1.13;font-size:clamp(40px,10vw,64px)}
+ .photo-break,.editorial-photo,.offer-card{max-width:100%}
+ .mobile-nav{max-height:calc(100dvh - 70px);overflow-y:auto}
+}
